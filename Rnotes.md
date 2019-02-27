@@ -89,3 +89,31 @@ Attributes of an object can be accessed using the "attributes()" function.
 > x <- list(1, "a", TRUE, 1+4i) ## lists are a vector that can contain multiple classes
 
 > x
+
+## Matrices
+
+> m <- matrix(nrow = 2, ncol = 3) ## matrice, vector with dimension
+
+> dim(m)
+[1] 2 3
+
+> attributes(m)
+$dim
+[1] 2 3
+
+> m <- matrix(1:6, nrow = 2, ncol = 3) ## fills down columns from left to right
+
+> m <- 1:10
+
+> m 
+[1] 1 2 3 4 5 6 7 8 9 10
+
+> dim(m) <- c(2,5) ## m converts from a vector to a matrix
+
+> x <- 1:3
+
+> y <- 10:12
+
+> cbind(x, y) ## fills 2x3 matrix by column top down (1 2 3, 10 11 12)
+ 
+> rbind(x, y) ## fills 3x2 matrix by row left to right (1 2 3, 10 11 12)
