@@ -95,9 +95,11 @@ Attributes of an object can be accessed using the "attributes()" function.
 > m <- matrix(nrow = 2, ncol = 3) ## matrice, vector with dimension
 
 > dim(m)
+
 [1] 2 3
 
 > attributes(m)
+
 $dim
 [1] 2 3
 
@@ -106,6 +108,7 @@ $dim
 > m <- 1:10
 
 > m 
+
 [1] 1 2 3 4 5 6 7 8 9 10
 
 > dim(m) <- c(2,5) ## m converts from a vector to a matrix
@@ -129,12 +132,14 @@ Using factors with labels is *better* than using integers because factors are se
 > x<- factor(c("yes", "yes", "yes", "yes", "no"))
 
 > x
+
 [1] yes yes yes yes no
 Levels: no yes
 
 > table(x) ## prints a table of no:1 yes:4
 
 > unclass(x)
+
 [1] 2 2 2 2 1
 attr(,"levels")
 [1] "no" "yes"
@@ -142,6 +147,7 @@ attr(,"levels")
 > x <- factor(c("yes, "no", "yes"), Levels = c("yes, "no"))
 
 > x
+
 [1] yes no yes
 Levels: yes no
 
