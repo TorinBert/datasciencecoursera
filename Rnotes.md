@@ -117,3 +117,31 @@ $dim
 > cbind(x, y) ## fills 2x3 matrix by column top down (1 2 3, 10 11 12)
  
 > rbind(x, y) ## fills 3x2 matrix by row left to right (1 2 3, 10 11 12)
+
+## Data Types - Factors
+
+- Factors used to represent categorical data
+- Factors can be unordered or ordered
+- Like an integer vector where each integer has a label
+- Factors are treated specifically by modeling functions like lm() and glm()
+Using factors with labels is *better* than using integers because factors are self-describing; having a variable that has values "male" and "female" is better than a variable that has values 1 and 2.
+
+> x<- factor(c("yes", "yes", "yes", "yes", "no"))
+
+> x
+[1] yes yes yes yes no
+Levels: no yes
+
+> table(x) ## prints a table of no:1 yes:4
+
+> unclass(x)
+[1] 2 2 2 2 1
+attr(,"levels")
+[1] "no" "yes"
+
+> x <- factor(c("yes, "no", "yes"), Levels = c("yes, "no"))
+
+> x
+[1] yes no yes
+Levels: yes no
+
